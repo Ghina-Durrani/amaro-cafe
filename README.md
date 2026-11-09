@@ -1,64 +1,182 @@
-# Amaro Café — Landing Page
+# ☕ Amaro Café — Good Coffee. Old Soul.
 
-React + Vite + Tailwind CSS + GSAP (ScrollTrigger) + Lenis + Lucide icons.
-Fully responsive (320px phones → 4K), lazy-loaded sections, real loading progress bar,
-reduced-motion support, self-hosted fonts (no Google Fonts requests).
+<p align="center">
+  <strong>A modern-retro café experience, crafted for the love of coffee.</strong>
+</p>
 
-## Run it in VS Code
+<p align="center">
+  A visually rich, responsive café landing page inspired by vintage Italian coffee culture, combining warm earthy tones, editorial typography, immersive visuals, and smooth scroll-driven animations.
+</p>
 
-1. Install **Node.js 18.18+** (LTS 20 or 22 recommended): https://nodejs.org  
-   Check: `node -v` and `npm -v` in a terminal.
-2. Unzip, then in VS Code: **File → Open Folder…** → choose the `amaro-cafe` folder.
-3. Open the built-in terminal: **Terminal → New Terminal** (`Ctrl + ``).  
-   The terminal must be inside the project folder (where `package.json` is).
-4. Install everything (one time):
-   ```bash
-   npm install
-   ```
-5. Start the dev server:
-   ```bash
-   npm run dev
-   ```
-   Open the link it prints (usually http://localhost:5173). Edits reload instantly.
-6. Production build + local preview:
-   ```bash
-   npm run build
-   npm run preview
-   ```
+<p align="center">
+  🌐 <a href="https://amaro-cafe.vercel.app/">Live Website</a>
+  &nbsp; • &nbsp;
+  💻 <a href="https://github.com/Ghina-Durrani/amaro-cafe">Source Code</a>
+</p>
 
-## Libraries (already listed in package.json — `npm install` gets them all)
+---
 
-| Package | Why |
+## ✨ About the Project
+
+**Amaro Café** is a fictional artisan coffee brand brought to life through a modern, editorial-style landing page.
+
+The website takes inspiration from the charm of 1970s Italian coffee advertisements, reimagined with contemporary web design. Its visual identity combines nostalgic aesthetics with modern interactions to create a warm, immersive digital café experience.
+
+From the oversized typography and layered coffee visuals to the interactive coffee-making journey, every section is designed to reflect the brand's personality:
+
+**Good Coffee. Old Soul.**
+
+## 🎨 Design & Visual Identity
+
+The website follows a **Modern Retro + Artisan Café** design direction.
+
+- 🎨 **Warm Earthy Palette:** Terracotta, caramel, cream, espresso brown, and muted olive green.
+- ✍️ **Editorial Typography:** Expressive serif headlines paired with clean, modern sans-serif text.
+- ☕ **Coffee-inspired Visuals:** Layered imagery, coffee elements, vintage-inspired stamps, and decorative details.
+- 📰 **Vintage Aesthetic:** Subtle textures, organic compositions, and nostalgic advertising influences.
+- 📐 **Responsive Layout:** Carefully adapted layouts for desktop, tablet, and mobile screens.
+
+## 🚀 Key Features
+
+| Feature | Description |
 |---|---|
-| react, react-dom | UI |
-| vite, @vitejs/plugin-react | dev server / bundler |
-| tailwindcss@3, postcss, autoprefixer | styling |
-| gsap | animations + ScrollTrigger |
-| lenis | smooth scrolling |
-| lucide-react | icons (tree-shaken) |
-| @fontsource-variable/fraunces, /dm-sans | self-hosted fonts |
+| ☕ Interactive Hero | Bold editorial typography, layered coffee visuals, and engaging entrance animations. |
+| 🎬 Coffee-making Experience | A four-stage, scroll-driven visual journey from coffee beans to the perfect cup. |
+| 📖 Brand Story | An editorial section introducing the fictional café and its identity. |
+| 🍮 Interactive Menu | A visually engaging presentation of signature coffee selections and prices. |
+| 🌿 Why Choose Us | Highlights the café's quality, craftsmanship, and atmosphere. |
+| 📍 Visit Us | Café information, opening hours, and contact details for the mock brand. |
+| 📱 Responsive Design | Adapted for mobile, tablet, laptop, and large desktop screens. |
+| ♿ Accessibility | Reduced-motion support and thoughtful interaction design. |
 
-To install them manually in a fresh project instead:
-```bash
-npm install react react-dom gsap lucide-react lenis @fontsource-variable/fraunces @fontsource-variable/dm-sans
-npm install -D vite@6 @vitejs/plugin-react@4 tailwindcss@3 postcss autoprefixer
+## 🎞️ The Coffee-making Experience
+
+One of the main highlights of Amaro Café is its scroll-driven coffee-making section.
+
+As visitors scroll, the experience progresses through four stages:
+
+1. **01 — The Beans:** The journey begins with carefully selected coffee beans.
+2. **02 — Freshly Ground:** Coffee beans are ground to bring out their character.
+3. **03 — The Pour:** Espresso is prepared and poured into the cup.
+4. **04 — The Perfect Cup:** Milk and latte art complete the experience.
+
+The sequence uses scroll-based animation to connect the stages into one visual storytelling experience.
+
+## 🛠️ Tech Stack
+
+| Technology | Purpose |
+|---|---|
+| ⚛️ React | Component-based frontend development |
+| ⚡ Vite | Fast development server and build tool |
+| 🎨 Tailwind CSS | Responsive styling and utility-first design |
+| 🎬 GSAP | Advanced animations and scroll interactions |
+| 🌀 GSAP ScrollTrigger | Scroll-based animation and pinned sections |
+| 🌊 Lenis | Smooth scrolling |
+| 🧩 Lucide React | Lightweight interface icons |
+| 🔤 Fraunces & DM Sans | Typography and visual identity |
+| ▲ Vercel | Deployment and hosting |
+
+## 📂 Project Structure
+
+```text
+amaro-cafe/
+│
+├── public/
+│   └── images/
+│
+├── src/
+│   ├── components/       # Reusable UI components
+│   ├── data/             # Content and image configuration
+│   ├── App.jsx
+│   ├── index.css
+│   └── main.jsx
+│
+├── package.json
+├── tailwind.config.js
+├── vite.config.js
+└── README.md
 ```
 
-## Use your own photos
-All pictures ship as built-in SVG illustrations. To swap in a real photo, put the file in
-`public/images/` and register it in `src/data/images.js`, e.g. `hero: '/images/hero-cup.webp'`.
+## 💻 Getting Started
 
-## Edit content
-Menu items, prices, hours, stage text: `src/data/content.js`.
-Colours / fonts / fluid type sizes: `tailwind.config.js`.
+Want to explore or run the project locally? Follow these steps.
 
-## Deploy to Vercel
-**Option A (GitHub):** push the project to GitHub → vercel.com → *Add New → Project* → import the repo.
-Vercel auto-detects Vite (Build: `npm run build`, Output: `dist`). Click Deploy.
+### Prerequisites
 
-**Option B (CLI):**
+- [Node.js](https://nodejs.org/) (18.18 or newer)
+- npm
+- Git
+
+### 1. Clone the repository
+
 ```bash
-npm i -g vercel
-vercel          # first deploy (preview)
-vercel --prod   # production
+git clone https://github.com/Ghina-Durrani/amaro-cafe.git
 ```
+
+### 2. Navigate to the project directory
+
+```bash
+cd amaro-cafe
+```
+
+### 3. Install dependencies
+
+```bash
+npm install
+```
+
+### 4. Start the development server
+
+```bash
+npm run dev
+```
+
+Open the local URL displayed in your terminal, usually:
+
+```text
+http://localhost:5173
+```
+
+### 5. Create a production build
+
+```bash
+npm run build
+```
+
+### 6. Preview the production build
+
+```bash
+npm run preview
+```
+
+## 🌐 Deployment
+
+The website is deployed using **Vercel**.
+
+Every update pushed to the connected GitHub repository can automatically trigger a new deployment.
+
+🔗 **Live Demo:** https://amaro-cafe.vercel.app/
+
+## 🔮 Future Improvements
+
+- 📸 Replace placeholder illustrations with high-quality coffee photography.
+- 🎥 Enhance the coffee-making experience with more detailed visual transitions.
+- ✨ Add more refined micro-interactions and hover effects.
+- 📱 Further optimize scroll animations for mobile devices.
+
+## 👩‍💻 Author
+
+**Ghina Durrani**
+
+- 💼 [LinkedIn](https://www.linkedin.com/in/ghina-durrani/)
+- 🐙 [GitHub](https://github.com/Ghina-Durrani)
+
+---
+
+<p align="center">
+  ☕ <strong>AMARO CAFÉ</strong>
+  <br/>
+  <em>Good Coffee. Old Soul.</em>
+  <br/><br/>
+  Made with ❤️ and a little caffeine.
+</p>
