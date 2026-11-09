@@ -1,0 +1,67 @@
+@import '@fontsource-variable/fraunces/wght.css';
+@import '@fontsource-variable/fraunces/wght-italic.css';
+@import '@fontsource-variable/dm-sans/wght.css';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html { background: #323b22; -webkit-text-size-adjust: 100%; }
+  body {
+    @apply font-sans text-espresso bg-cream antialiased;
+    overflow-x: hidden;
+    text-rendering: optimizeLegibility;
+  }
+  h1, h2, h3, h4 { @apply font-serif; }
+  img, svg { max-width: 100%; }
+  :focus-visible { outline: 2px solid #C8874C; outline-offset: 3px; border-radius: 2px; }
+  ::selection { background: #C8874C; color: #211B0A; }
+
+  /* Lenis smooth-scroll required styles */
+  html.lenis, html.lenis body { height: auto; }
+  .lenis.lenis-smooth { scroll-behavior: auto !important; }
+  .lenis.lenis-stopped { overflow: hidden; }
+}
+
+@layer components {
+  .wrap { @apply mx-auto w-full max-w-[84rem] px-5 sm:px-8 lg:px-12; }
+  .section { @apply py-16 sm:py-20 lg:py-28; }
+  .label { @apply font-sans text-label font-bold uppercase; }
+
+  .btn {
+    @apply inline-flex items-center justify-center gap-2 rounded border px-6 py-3.5 font-sans text-[0.75rem] font-bold uppercase tracking-[0.14em] transition-[transform,box-shadow,background-color] duration-150 select-none;
+    min-height: 48px; /* comfortable touch target */
+  }
+  .btn-primary {
+    @apply btn border-espresso bg-terracotta text-cream shadow-press-sm hover:bg-terracotta-dark;
+  }
+  .btn-primary:active { transform: translate(2px, 2px); box-shadow: 1px 1px 0 0 #633D2A; }
+  .btn-secondary { @apply btn border-espresso border-[1.5px] bg-transparent text-espresso hover:bg-caramel/30; }
+  .btn-light { @apply btn border-ink bg-cream text-forest shadow-press-dark-sm hover:bg-paper; }
+  .btn-light:active { transform: translate(2px, 2px); box-shadow: 1px 1px 0 0 #211B0A; }
+
+  .rule { @apply h-px flex-1 bg-current opacity-40; }
+  .grain::before {
+    content: ''; position: absolute; inset: 0; pointer-events: none; opacity: .09; mix-blend-mode: multiply;
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='160' height='160'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 .4  0 0 0 0 .25  0 0 0 0 .15  0 0 0 .9 0'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>");
+  }
+  .skeleton {
+    background: linear-gradient(100deg, rgba(99,61,42,.08) 30%, rgba(99,61,42,.18) 50%, rgba(99,61,42,.08) 70%);
+    background-size: 200% 100%;
+  }
+}
+
+/* Hero depth: the cup sits in front of the oversized headline */
+.hero-glow {
+  background:
+    radial-gradient(60% 50% at 50% 42%, rgba(200,135,76,.22), transparent 70%),
+    radial-gradient(40% 40% at 12% 90%, rgba(120,128,91,.25), transparent 70%);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, ::before, ::after {
+    animation-duration: .01ms !important; animation-iteration-count: 1 !important;
+    transition-duration: .01ms !important; scroll-behavior: auto !important;
+  }
+}
